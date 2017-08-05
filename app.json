@@ -4,6 +4,7 @@
     "pages/classify/index",
     "pages/cart/index",
     "pages/mine/index",
+    "pages/search/index",
     "pages/logs/logs"
   ],
   "window": {

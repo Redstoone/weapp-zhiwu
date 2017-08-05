@@ -35,16 +35,23 @@ Page({
     var that = this;
   },
 
+  // 搜索
+  toSearch: function() {
+    wx.navigateTo({
+      url: "/pages/search/index"
+    });
+  },
+
   // 查看更多
   toMore: function() {
     wx.navigateTo({
-      url: "../logs/logs"
+      url: "/pages/logs/logs"
     });
   },
-  //详情
+  // 详情
   toGoods: function() {
     wx.navigateTo({
-      url: "../logs/logs"
+      url: "/pages/logs/logs"
     });
   }
 });

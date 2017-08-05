@@ -26,6 +26,5 @@
 .composite-former-text{line-height: 48rpx;}
 .composite-like{line-height: 48rpx;}
 
-
-
+.search-bar{background-color: #fff;}
 

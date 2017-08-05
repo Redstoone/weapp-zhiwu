@@ -1,3 +1,5 @@
+@import 'assets/style/weui.wxss';
+
 page{background:#fff;color:#666;font-size:24rpx;line-height:34rpx;}
 .clear::after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0;content:"";}
 .left{float:left;}
@@ -78,4 +80,3 @@ image{width:100%;}
 .submit{width:428rpx;background:#ff4c90;}
 
 
-@import 'assets/style/weui.wxss';
