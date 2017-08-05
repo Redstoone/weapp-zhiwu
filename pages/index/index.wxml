@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="index-sts-title clear">
+    <view class="index-star left">新品热销</view>
+  </view>
+
+  <swiper class="swiper-wrap" indicator-dots="true" autoplay="false" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="index-sts-title clear">
+    <view class="index-star left">限时优惠</view>
+  </view>
+
+  <view class="index-sts-title clear">
+    <view class="index-star left">热销排行 TOP</view>
+  </view>
+
+  <view class="index-sts-title clear">
+    <view class="index-star left">美妆</view>
+    <view class="right clear index-more" bindtap="toMore">
+      <view class="text right">查看更多</view>
+    </view>
+  </view>
+
+  <view class="navbar-matter">
+    <view class="composite clear">
+      <view class="composite-item left bmg" wx:for="{{composite}}" wx:key="index" bindtap="toGoods">
+        <view class="composite-img">
+          <image class="composite-img-image" src="{{item.img}}" mode="aspectFill"></image>
+        </view>
+        <view class="composite-cant">
+          <view class="composite-name">{{item.name}}</view>
+          <view class="composite-info clear">
+            <view class="composite-price clear left">
+              <view class="composite-now left">￥
+                <text class="composite-now-text">{{item.xz}}</text>
+              </view>
+              <view class="composite-former left">￥
+                <text class="composite-former-text">{{item.yl}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
