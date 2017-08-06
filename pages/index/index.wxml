@@ -53,12 +53,23 @@
     </view>
   </scroll-view>
 
-  <!-- <scroll-view scroll-x style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view id="green" class="scroll-view-item bc_green"></view>
-    <view id="red"  class="scroll-view-item bc_red"></view>
-    <view id="yellow" class="scroll-view-item bc_yellow"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-  </scroll-view> -->
+  <view class="recommend">
+    <view class="re-big page-bd-spacing">
+      <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
+    </view>
+
+    <view class="re-two weui-flex page-bd-spacing">
+      <view class="ret-item weui-flex__item" wx:for="{{reTwo}}" wx:key="index">
+        <image class="img" src="{{item}}" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="re-three page-bd-spacing">
+      <view class="ret-item" wx:for="{{imgUrls}}" wx:key="index">
+        <image class="img" src="{{item}}" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
 
   <view class="box-title page-bd-spacing weui-flex">
     <label class="bt-star weui-flex__item">限时优惠</label>

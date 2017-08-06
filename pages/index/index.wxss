@@ -79,6 +79,32 @@
   color: #252525;
 }
 
+.recommend {
+  margin-right: 0;
+}
+.re-two,
+.re-three {
+  margin-top: 40rpx;
+}
+.re-two .ret-item {
+  margin-right: 20rpx;
+  width: 340rpx;
+  height: 400rpx;
+}
+.re-two .ret-item .img,
+.re-three .ret-item .img {
+  height: 100%;
+}
+.re-two .ret-item:last-child {
+  margin-right: 0;
+}
+
+.re-three .ret-item {
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 300rpx;
+}
+
 .goods-list {
   margin: 20rpx;
 }

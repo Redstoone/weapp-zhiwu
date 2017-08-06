@@ -47,6 +47,10 @@ Page({
         condition: 800,
         expiration: '2017.10.11'
       }
+    ],
+    reTwo: [
+      "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg"
     ]
   },
   onLoad: function() {
