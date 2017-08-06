@@ -1,9 +1,49 @@
 /**index.wxss**/
-.swiper-wrap {height: 450rpx;}
-.swiper-wrap .wx-swiper-dot {width: 45rpx; height: 7rpx; background-color: #adadad; border-radius: 0;}
-.swiper-wrap .wx-swiper-dot.wx-swiper-dot-active {background-color: #fff;}
+.search-bar {
+  background-color: #fff;
+  border-top: none;
+}
 
-.index-sts-title{margin:20rpx;padding: 20rpx 30rpx;background-color: #252525;}
+
+.swiper-wrap {
+  height: 450rpx;
+}
+.swiper-wrap .wx-swiper-dot {
+  width: 45rpx;
+  height: 7rpx;
+  background-color: #adadad;
+  border-radius: 0;
+}
+.swiper-wrap .wx-swiper-dot.wx-swiper-dot-active {
+  background-color: #fff;
+}
+
+
+.box-title{margin:20rpx;padding: 20rpx 30rpx;background-color: #252525;}
+.bt-star{line-height: 42rpx;font-size: 30rpx;color: #fff;font-weight: bold}
+.bt-more{height: 40rpx;line-height: 40rpx;color: #fff;width: 100rpx;text-align: right;}
+
+/* .index-more-image{width: 10rpx;height: 20rpx;margin-top:7rpx;} */
+
+.goods-list{margin:20rpx;}
+.goods-item{width: 345rpx;position: relative;margin-right:20rpx;}
+.goods-item-head{position: absolute;left: 30rpx;top:330rpx;line-height: 50rpx;color: #fff}
+.goods-item-img{width: 50rpx;height: 50rpx;overflow: hidden;border-radius: 50%;margin-right: 20rpx;}
+.goods-item-img-image{width: 50rpx;height: 50rpx;}
+.goods-item:nth-child(2){margin-right:0}
+.goods-img-image{width: 345rpx;height: 345rpx;}
+.goods-cant{padding: 10rpx 0 20rpx 10rpx;}
+.goods-name{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;font-size: 28rpx;color: #333333}
+.goods-info{margin-top: 10rpx;color: #999;}
+.goods-price{font-size: 22rpx;}
+.goods-now{color:#999;text-align: center;}
+.goods-now-text{line-height: 48rpx;font-size: 30rpx;font-weight: bold}
+.goods-former{margin-left: 10rpx;text-decoration:line-through}
+.goods-former-text{line-height: 48rpx;}
+.goods-like{line-height: 48rpx;}
+
+
+/* .index-sts-title{margin:20rpx;padding: 20rpx 30rpx;background-color: #252525;}
 .index-star{line-height: 42rpx;font-size: 30rpx;color: #fff;font-weight: bold}
 .index-more{height: 40rpx;line-height: 40rpx;}
 .index-more .text{color: #fff;margin-right: 10rpx;}
@@ -24,7 +64,4 @@
 .composite-now-text{line-height: 48rpx;font-size: 30rpx;font-weight: bold}
 .composite-former{margin-left: 10rpx;text-decoration:line-through}
 .composite-former-text{line-height: 48rpx;}
-.composite-like{line-height: 48rpx;}
-
-.search-bar{background-color: #fff;}
-
+.composite-like{line-height: 48rpx;} */

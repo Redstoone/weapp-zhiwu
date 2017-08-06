@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="index-sts-title clear">
-    <view class="index-star left">新品热销</view>
+  <view class="page__bd_spacing box-title weui-flex">
+    <label class="bt-star weui-flex__item">新品热销</label>
   </view>
 
   <view class="weui-search-bar search-bar">
@@ -25,37 +25,37 @@
     </block>
   </swiper>
 
-  <view class="index-sts-title clear">
-    <view class="index-star left">限时优惠</view>
+  <view class="box-title page-bd-spacing weui-flex">
+    <label class="bt-star weui-flex__item">限时优惠</label>
   </view>
 
-  <view class="index-sts-title clear">
-    <view class="index-star left">热销排行 TOP</view>
+  <view class="box-title page-bd-spacing weui-flex">
+    <label class="bt-star weui-flex__item">热销排行 TOP</label>
   </view>
 
-  <view class="index-sts-title clear">
-    <view class="index-star left">美妆</view>
-    <view class="right clear index-more" bindtap="toMore">
-      <view class="text right">查看更多</view>
-    </view>
+  <view class="box-title page-bd-spacing weui-flex">
+    <label class="bt-star weui-flex__item">美妆</label>
+    <label class="bt-more" bindtap="toMore">
+      查看更多
+    </label>
   </view>
 
-  <view class="navbar-matter">
-    <view class="composite clear">
-      <view class="composite-item left bmg" wx:for="{{composite}}" wx:key="index" bindtap="toGoods">
-        <view class="composite-img">
-          <image class="composite-img-image" src="{{item.img}}" mode="aspectFill"></image>
+  <view class="goods-list page-bd-spacing">
+    <view class="goods clear">
+      <view class="goods-item left bmg" wx:for="{{goodsList}}" wx:key="index" bindtap="toGoods">
+        <view class="goods-img">
+          <image class="goods-img-image" src="{{item.img}}" mode="aspectFill"></image>
         </view>
-        <view class="composite-cant">
-          <view class="composite-name">{{item.name}}</view>
-          <view class="composite-info clear">
-            <view class="composite-price clear left">
-              <view class="composite-now left">￥
-                <text class="composite-now-text">{{item.xz}}</text>
+        <view class="goods-cant">
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-info clear">
+            <view class="goods-price">
+              <view class="goods-now">￥
+                <text class="goods-now-text">{{item.xz}}</text>
               </view>
-              <view class="composite-former left">￥
-                <text class="composite-former-text">{{item.yl}}</text>
-              </view>
+              <!-- <view class="goods-former left">￥
+                <text class="goods-former-text">{{item.yl}}</text>
+              </view> -->
             </view>
           </view>
         </view>
