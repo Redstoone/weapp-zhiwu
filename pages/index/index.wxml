@@ -53,7 +53,7 @@
     </view>
   </scroll-view>
 
-  <view class="recommend">
+  <view class="recommend-wrap">
     <view class="re-big page-bd-spacing">
       <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
     </view>
@@ -73,6 +73,68 @@
 
   <view class="box-title page-bd-spacing weui-flex">
     <label class="bt-star weui-flex__item">限时优惠</label>
+  </view>
+
+  <view class="discount-wrap">
+    <view class="dw-one dw-item">
+      <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
+
+      <view class="di-percent">80%</view>
+
+      <view class="di-footer">
+        <view class="di-name">韩国淡化肌底液xxxxx</view>
+        <view class="di-price clear">
+          <view class="di-now left">￥<text class="di-now-txt">230</text></view>
+          <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="dw-two dw-item">
+          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
+
+          <view class="di-percent">80%</view>
+
+          <view class="di-footer">
+            <view class="di-name">韩国淡化肌底液xxxxx</view>
+            <view class="di-price clear">
+              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
+              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="dw-three dw-item">
+          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
+
+          <view class="di-percent">80%</view>
+
+          <view class="di-footer">
+            <view class="di-price clear">
+              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
+              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+            </view>
+            <view class="di-time">截止时间：2017.11.10 23：22</view>
+          </view>
+        </view>
+        <view class="dw-three dw-item">
+          <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
+
+          <view class="di-percent">80%</view>
+
+          <view class="di-footer">
+            <view class="di-price clear">
+              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
+              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+            </view>
+            <view class="di-time">截止时间：2017.11.10 23：22</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 
   <view class="box-title page-bd-spacing weui-flex">
@@ -99,14 +161,10 @@
               <view class="goods-now">￥
                 <text class="goods-now-text">{{item.xz}}</text>
               </view>
-              <!-- <view class="goods-former left">￥
-                <text class="goods-former-text">{{item.yl}}</text>
-              </view> -->
             </view>
           </view>
         </view>
       </view>
     </view>
   </view>
-
 </view>
