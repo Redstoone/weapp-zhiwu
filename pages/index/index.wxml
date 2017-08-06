@@ -1,7 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="page__bd_spacing box-title weui-flex">
-    <label class="bt-star weui-flex__item">新品热销</label>
+
+  <view class="weui-tab index-tab page-bd-spacing">
+    <view class="weui-navbar">
+      <view class="weui-navbar__item" bindtap="toSearch">分类</view>
+      <view class="weui-navbar__item" bindtap="toSearch">新品</view>
+      <view class="weui-navbar__item" bindtap="toSearch">动态</view>
+      <view class="weui-navbar__item">
+        <!-- <button open-type="contact" session-from="weapp"> -->
+          客服
+        <!-- </button> -->
+      </view>
+    </view>
   </view>
 
   <view class="weui-search-bar search-bar">
@@ -17,6 +27,10 @@
     </view>
   </view>
 
+  <view class="page-bd-spacing box-title weui-flex">
+    <label class="bt-star weui-flex__item">新品热销</label>
+  </view>
+
   <swiper class="swiper-wrap" indicator-dots="true" autoplay="false" interval="5000" duration="1000">
     <block wx:for="{{imgUrls}}" wx:key="index">
       <swiper-item>
@@ -24,6 +38,27 @@
       </swiper-item>
     </block>
   </swiper>
+
+  <scroll-view scroll-x="true">
+    <view class="coupon-list" scroll-x="true">
+      <view class="coupon-item" wx:for="{{coupons}}" wx:key="index" bindtap="getCoupon">
+        <view class="ci-content-wrap" style="background-image:url(../../assets/images/coupon.png)">
+          <view class="ci-content">
+            <view class="ci-amount">￥{{item.amount}}</view>
+            <view class="ci-condition">满{{item.condition}}元使用</view>
+            <view class="ci-expiration">{{item.expiration}}前有效</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- <scroll-view scroll-x style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view> -->
 
   <view class="box-title page-bd-spacing weui-flex">
     <label class="bt-star weui-flex__item">限时优惠</label>

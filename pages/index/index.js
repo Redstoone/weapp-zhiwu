@@ -30,6 +30,23 @@ Page({
       "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
       "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+    ],
+    coupons: [
+      {
+        amount: 10,
+        condition: 100,
+        expiration: '2017.10.11'
+      },
+      {
+        amount: 40,
+        condition: 300,
+        expiration: '2017.10.11'
+      },
+      {
+        amount: 80,
+        condition: 800,
+        expiration: '2017.10.11'
+      }
     ]
   },
   onLoad: function() {
