@@ -105,8 +105,6 @@
   height: 300rpx;
 }
 
-.discount-wrap {
-}
 .dw-item {
   position: relative;
 }
@@ -221,13 +219,13 @@
   text-align: center;
   position: relative;
 }
-.tl-item .tl-cont::after{
-  content: "";
-  width: 2rpx;
+.tl-item .tl-line{
+  position: absolute;
+  width: 5rpx;
   top: 49rpx;
   height: 120rpx;
   background-color: #fff;
-  position: absolute;
+  z-index: 1;
 }
 .tl-item .tl-brand {
   color: #252525;
@@ -273,11 +271,11 @@
   right: 0;
   top: 0;
 }
-.tl-item-odd .tl-item .tl-cont::after{
-  right: 0
+.tl-item-odd .tl-line{
+  right: -2rpx
 }
-.tl-item-even .tl-item .tl-cont::after{
-  left: 0
+.tl-item-even .tl-line{
+  left: -2rpx
 }
 
 .goods-list {

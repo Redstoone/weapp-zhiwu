@@ -168,6 +168,7 @@
           <view class="tl-brand">{{item.brand}}</view>
           <view class="tl-name">{{item.name}}</view>
           <view class="tl-price">￥ {{item.price}}</view>
+          <view class="tl-line"></view>
         </view>
       </view>
       <view class="tl-item-even weui-flex" wx:else>
@@ -175,6 +176,7 @@
           <view class="tl-brand">{{item.brand}}</view>
           <view class="tl-name">{{item.name}}</view>
           <view class="tl-price">￥ {{item.price}}</view>
+          <view class="tl-line"></view>
         </view>
         <view class="weui-flex__item tl-img">
           <image src="{{item.img}}"></image>
