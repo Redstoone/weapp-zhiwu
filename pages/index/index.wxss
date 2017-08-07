@@ -109,17 +109,24 @@
 
 }
 .dw-item{position: relative;}
-.dw-item .di-percent{position: absolute;right: 0;top: 0;background-color: #ba1919;text-align: center;color: #fff;}
-.dw-one .di-percent{width: 154rpx;height: 66rpx;line-height: 66rpx;font-size: 40rpx;font-weight: 600;}
+.dw-item .di-percent{position: absolute;right: 0;top: 0;background-color: #ba1919;text-align: center;color: #fff;width: 80rpx;height: 36rpx;line-height: 36rpx;}
 .dw-item .di-footer{box-sizing: border-box; width: 100%;padding: 0 30rpx; position: absolute;left: 0;bottom: 0;background-image: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0));}
-.dw-one .di-footer{height: 96rpx;}
-
-.dw-item .di-name{font-size: 28rpx;line-height: 48rpx;color: #252525;font-weight: 600;}
+.dw-item .di-name{font-size: 28rpx;line-height: 48rpx;color: #252525;font-weight: 600;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .dw-item .di-price{font-size: 22rpx;}
 .dw-item .di-now{color:#ff3a05;}
 .dw-item .di-now-txt{line-height: 36rpx;font-size: 30rpx;font-weight: bold}
 .dw-item .di-former{margin-left: 10rpx;text-decoration:line-through}
 .dw-item .di-former-txt{line-height: 48rpx;}
+.dw-item image{height: 100%;}
+
+.dw-one{height: 380rpx;width: 100%;margin-bottom:22rpx;}
+.dw-one .di-percent{width: 154rpx;height: 66rpx;line-height: 66rpx;font-size: 40rpx;font-weight: 600;}
+.dw-one .di-footer{height: 96rpx;}
+.dw-two{height: 372rpx;width: 364rpx;margin-right:10rpx;}
+.dw-three{height: 174rpx;width: 367rpx;}
+.dw-three .di-time{font-size: 20rpx;}
+.dw-item-three{margin-left:10rpx;}
+.dw-item-three .dw-three:first-child{margin-bottom:20rpx;}
 
 .goods-list {
   margin: 20rpx;

@@ -106,7 +106,7 @@
           </view>
         </view>
       </view>
-      <view class="weui-flex__item">
+      <view class="weui-flex__item dw-item-three">
         <view class="dw-three dw-item">
           <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode="aspectFill"></image>
 
