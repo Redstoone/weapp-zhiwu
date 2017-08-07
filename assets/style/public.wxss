@@ -23,8 +23,8 @@ image {
 }
 
 .page-bd-spacing {
-  margin-left: 30rpx;
-  margin-right: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
 }
 
 /* .clear::after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0;content:"";}

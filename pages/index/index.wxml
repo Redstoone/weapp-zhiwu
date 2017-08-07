@@ -8,7 +8,7 @@
       <view class="weui-navbar__item" bindtap="toSearch">动态</view>
       <view class="weui-navbar__item">
         <!-- <button open-type="contact" session-from="weapp"> -->
-          客服
+        客服
         <!-- </button> -->
       </view>
     </view>
@@ -59,13 +59,13 @@
     </view>
 
     <view class="re-two weui-flex page-bd-spacing">
-      <view class="ret-item weui-flex__item" wx:for="{{reTwo}}" wx:key="index">
+      <view class="ret-item weui-flex__item" wx:for="{{reTwo}}" wx:key="{{index}}">
         <image class="img" src="{{item}}" mode="aspectFill"></image>
       </view>
     </view>
 
     <view class="re-three page-bd-spacing">
-      <view class="ret-item" wx:for="{{imgUrls}}" wx:key="index">
+      <view class="ret-item" wx:for="{{imgUrls}}" wx:key="{{index}}">
         <image class="img" src="{{item}}" mode="aspectFill"></image>
       </view>
     </view>
@@ -84,8 +84,12 @@
       <view class="di-footer">
         <view class="di-name">韩国淡化肌底液xxxxx</view>
         <view class="di-price clear">
-          <view class="di-now left">￥<text class="di-now-txt">230</text></view>
-          <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+          <view class="di-now left">￥
+            <text class="di-now-txt">230</text>
+          </view>
+          <view class="di-former left">￥
+            <text class="di-former-txt">500</text>
+          </view>
         </view>
       </view>
     </view>
@@ -100,8 +104,12 @@
           <view class="di-footer">
             <view class="di-name">韩国淡化肌底液xxxxx</view>
             <view class="di-price clear">
-              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
-              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+              <view class="di-now left">￥
+                <text class="di-now-txt">230</text>
+              </view>
+              <view class="di-former left">￥
+                <text class="di-former-txt">500</text>
+              </view>
             </view>
           </view>
         </view>
@@ -114,8 +122,12 @@
 
           <view class="di-footer">
             <view class="di-price clear">
-              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
-              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+              <view class="di-now left">￥
+                <text class="di-now-txt">230</text>
+              </view>
+              <view class="di-former left">￥
+                <text class="di-former-txt">500</text>
+              </view>
             </view>
             <view class="di-time">截止时间：2017.11.10 23：22</view>
           </view>
@@ -127,8 +139,12 @@
 
           <view class="di-footer">
             <view class="di-price clear">
-              <view class="di-now left">￥<text class="di-now-txt">230</text></view>
-              <view class="di-former left">￥<text class="di-former-txt">500</text></view>
+              <view class="di-now left">￥
+                <text class="di-now-txt">230</text>
+              </view>
+              <view class="di-former left">￥
+                <text class="di-former-txt">500</text>
+              </view>
             </view>
             <view class="di-time">截止时间：2017.11.10 23：22</view>
           </view>
@@ -139,6 +155,33 @@
 
   <view class="box-title page-bd-spacing weui-flex">
     <label class="bt-star weui-flex__item">热销排行 TOP</label>
+  </view>
+
+  <view class="top-list page-bd-spacing">
+    <view class="tl-item" wx:for="{{topList}}" wx:key="{{index}}">
+      <view class="tl-item-odd weui-flex" wx:if="{{index % 2 == 0}}">
+        <view class="weui-flex__item tl-img">
+          <image src="{{item.img}}"></image>
+          <image class="tl-top" src="../../assets/images/top{{index+1}}.png"></image>
+        </view>
+        <view class="weui-flex__item tl-cont">
+          <view class="tl-brand">{{item.brand}}</view>
+          <view class="tl-name">{{item.name}}</view>
+          <view class="tl-price">￥ {{item.price}}</view>
+        </view>
+      </view>
+      <view class="tl-item-even weui-flex" wx:else>
+        <view class="weui-flex__item tl-cont">
+          <view class="tl-brand">{{item.brand}}</view>
+          <view class="tl-name">{{item.name}}</view>
+          <view class="tl-price">￥ {{item.price}}</view>
+        </view>
+        <view class="weui-flex__item tl-img">
+          <image src="{{item.img}}"></image>
+          <image class="tl-top" src="../../assets/images/top{{index+1}}.png"></image>
+        </view>
+      </view>
+    </view>
   </view>
 
   <view class="box-title page-bd-spacing weui-flex">
