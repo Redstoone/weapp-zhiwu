@@ -1,9 +1,11 @@
 const app = getApp();
+import goods from "../common/goodsList";
 
-Page({
+const indexObj = {
   data: {
     goodsList: [
       {
+        id: 1,
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
         name: "夏日显白清新白色恋人爆钻款",
@@ -11,6 +13,7 @@ Page({
         yl: "366"
       },
       {
+        id: 2,
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
         name: "夏日显白清新白色恋人爆钻款夏日显白清新白色恋人爆钻款",
@@ -19,6 +22,7 @@ Page({
         yl: "366"
       },
       {
+        id: 3,
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
         name: "夏日清凉！显白人鱼蓝亮片钻甲",
@@ -35,17 +39,17 @@ Page({
       {
         amount: 10,
         condition: 100,
-        expiration: '2017.10.11'
+        expiration: "2017.10.11"
       },
       {
         amount: 40,
         condition: 300,
-        expiration: '2017.10.11'
+        expiration: "2017.10.11"
       },
       {
         amount: 80,
         condition: 800,
-        expiration: '2017.10.11'
+        expiration: "2017.10.11"
       }
     ],
     reTwo: [
@@ -56,35 +60,35 @@ Page({
       {
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        brand: '玛丽安宝莱',
+        brand: "玛丽安宝莱",
         name: "深层洗护套装XXXXXXXX",
         price: 240
       },
       {
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        brand: '玛丽安宝莱',
+        brand: "玛丽安宝莱",
         name: "深层洗护套装XXXXXXXX",
         price: 240
       },
       {
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        brand: '玛丽安宝莱',
+        brand: "玛丽安宝莱",
         name: "深层洗护套装XXXXXXXX",
         price: 240
       },
       {
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        brand: '玛丽安宝莱',
+        brand: "玛丽安宝莱",
         name: "深层洗护套装XXXXXXXX",
         price: 240
       },
       {
         img:
           "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        brand: '玛丽安宝莱',
+        brand: "玛丽安宝莱",
         name: "深层洗护套装XXXXXXXX",
         price: 240
       }
@@ -96,22 +100,26 @@ Page({
   },
 
   // 搜索
-  toSearch: function() {
+  toSearch: function(e) {
     wx.navigateTo({
       url: "/pages/search/index"
     });
   },
 
   // 查看更多
-  toMore: function() {
+  toMore: function(e) {
     wx.navigateTo({
-      url: "/pages/logs/logs"
+      url: "/pages/goods/list/index"
     });
   },
-  // 详情
-  toGoods: function() {
+
+  // 商品详情
+  toGoodsDetail: function(e) {
     wx.navigateTo({
-      url: "/pages/logs/logs"
+      url: "/pages/goods/detail/index?id=" + e.currentTarget.dataset.id
     });
   }
-});
+};
+
+indexObj["toGoodsDetail"] = goods.toGoodsDetail;
+Page(indexObj);

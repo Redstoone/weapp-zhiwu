@@ -1,4 +1,5 @@
-<!--index.wxml-->
+<import src="../common/goodsList.wxml"/>
+
 <view class="container">
 
   <view class="weui-tab index-tab page-bd-spacing">
@@ -32,7 +33,7 @@
   </view>
 
   <swiper class="swiper-wrap" indicator-dots="true" autoplay="false" interval="5000" duration="1000">
-    <block wx:for="{{imgUrls}}" wx:key="index">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" mode="aspectFill" />
       </swiper-item>
@@ -41,7 +42,7 @@
 
   <scroll-view scroll-x="true">
     <view class="coupon-list" scroll-x="true">
-      <view class="coupon-item" wx:for="{{coupons}}" wx:key="index" bindtap="getCoupon">
+      <view class="coupon-item" wx:for="{{coupons}}" wx:key="{{index}}" bindtap="getCoupon">
         <view class="ci-content-wrap" style="background-image:url(../../assets/images/coupon.png)">
           <view class="ci-content">
             <view class="ci-amount">￥{{item.amount}}</view>
@@ -193,23 +194,5 @@
     </label>
   </view>
 
-  <view class="goods-list page-bd-spacing">
-    <view class="goods clear">
-      <view class="goods-item left bmg" wx:for="{{goodsList}}" wx:key="index" bindtap="toGoods">
-        <view class="goods-img">
-          <image class="goods-img-image" src="{{item.img}}" mode="aspectFill"></image>
-        </view>
-        <view class="goods-cant">
-          <view class="goods-name">{{item.name}}</view>
-          <view class="goods-info clear">
-            <view class="goods-price">
-              <view class="goods-now">￥
-                <text class="goods-now-text">{{item.xz}}</text>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+  <template is="goodsList" data="{{goodsList}}"/>
 </view>

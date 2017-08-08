@@ -5,6 +5,8 @@
     "pages/cart/index",
     "pages/mine/index",
     "pages/search/index",
+    "pages/goods/detail/index",
+    "pages/goods/list/index",
     "pages/logs/logs"
   ],
   "window": {

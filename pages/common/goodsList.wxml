@@ -1,0 +1,21 @@
+<template name="goodsList">
+  <view class="goods-list page-bd-spacing">
+    <view class="goods clear">
+      <view class="goods-item left bmg" wx:for-items="{{goodsList}}" wx:key="{{index}}" bindtap="toGoodsDetail" data-id="{{item.id}}">
+        <view class="goods-img">
+          <image class="goods-img-image" src="{{item.img}}" mode="aspectFill"></image>
+        </view>
+        <view class="goods-cant">
+          <view class="goods-name">{{item.name}}</view>
+          <view class="goods-info clear">
+            <view class="goods-price">
+              <view class="goods-now">￥
+                <text class="goods-now-text">{{item.xz}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

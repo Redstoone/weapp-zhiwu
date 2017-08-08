@@ -1,6 +1,7 @@
 const App = getApp();
+import goods from "../common/goodsList";
 
-Page({
+const indexObj = {
   data: {
     inputVal: ""
   },
@@ -17,24 +18,31 @@ Page({
   },
   search() {
     if (!this.data.inputVal) return;
-    App.HttpService
-      .search({
+    wx.request({
+      url: "/search",
+      data: {
         keyword: this.data.inputVal
-      })
-      .then(res => {
+      },
+      header: {
+        "content-type": "application/json"
+      },
+      success: function(res) {
         const data = res.data;
         console.log(data);
         if (data.meta.code == 0) {
           this.setData({
-            items: data.data
+            goodsList: data.data
           });
         }
-      });
-  },
-  redirectTo(e) {
-    console.log(e);
-    App.WxService.redirectTo("/pages/goods/list/index", {
-      keyword: e.currentTarget.dataset.keyword
+      }
     });
   }
-});
+  // redirectTo(e) {
+  //   App.WxService.redirectTo("/pages/goods/list/index", {
+  //     keyword: e.currentTarget.dataset.keyword
+  //   });
+  // }
+};
+
+indexObj["toGoodsDetail"] = goods.toGoodsDetail;
+Page(indexObj);
