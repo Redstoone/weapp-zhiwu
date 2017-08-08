@@ -1,7 +1,6 @@
 <import src="../common/goodsList.wxml"/>
 
 <view class="container">
-
   <view class="weui-tab index-tab page-bd-spacing">
     <view class="weui-navbar">
       <view class="weui-navbar__item" bindtap="toSearch">分类</view>
@@ -194,5 +193,7 @@
     </label>
   </view>
 
-  <template is="goodsList" data="{{goodsList}}"/>
+  <block wx:if="{{!!goodsList.length}}">
+		<template is="goodsList" data="{{goodsList}}"/>
+	</block>
 </view>
