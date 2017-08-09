@@ -1,22 +1,48 @@
+<import src="../common/goodsList.wxml"/>
+
 <view class="container">
 	<view class="swiper-container">
 		<swiper class="swiper-box" indicator-dots="{{ indicatorDots }}" vertical="{{ vertical }}" autoplay="{{ autoplay }}" interval="{{ interval }}"
 		 duration="{{ duration }}" bindchange="swiperchange">
-			<block wx:for="{{ goods.item.images }}" wx:key="">
+			<block wx:for="{{ imgUrls }}" wx:key="{{index}}">
 				<swiper-item>
-					<image src="{{ item.path }}" class="slide-image" data-index="{{ index }}" bindtap="previewImage" />
+					<image src="{{ item }}" class="slide-image" data-index="{{ index }}" bindtap="previewImage" mode="aspectFill" />
 				</swiper-item>
 			</block>
 		</swiper>
-		<view class="swiper-pager">{{ current + 1 }} / {{ total }}</view>
 	</view>
-	<view class="shopping-container">
-		<view class="name">{{ goods.item.name }}</view>
-		<view class="price">¥ {{ goods.item.price }}</view>
-		<text class="remark">{{ goods.item.remark }}</text>
+
+	<view class="goods-info">
+		<view class="goods-title">goodsDetail.basicInfo.name</view>
+		<view class="goods-price">¥350</view>
+		<view class="market-price">¥530</view>
 	</view>
-	<view class="btn-plus" bindtap="addCart">
-		<image class="icon" src="../../../assets/images/iconfont-plus-circle.png" />
-		<text>加入购物车</text>
+
+	<view class="weui-flex page-bd-spacing">
+		<view class="weui-flex__item">快递：12.00元</view>
+		<view class="weui-flex__item txt-center">剩余：1770</view>
+		<view class="weui-flex__item txt-right">销量：63</view>
 	</view>
+	<view  class="row-arrow" bindtap="bindGuiGeTap">
+		选择 数量 效果分类
+	</view>
+
+
+	<view class="goods-des-info">
+		<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+	</view>
+
+	<view class="footer-box weui-flex">
+		<view class="contact weui-flex__item">
+			<contact-button type="default-dark" session-from="weapp" size="27"></contact-button>
+			联系客服
+		</view>
+		<view class="join-shop-cart weui-flex__item" bindtap="toAddShopCar">加入购物车</view>
+		<view class="now-buy weui-flex__item" bindtap="tobuy">立即购买</view>
+	</view>
+
+
+	<block wx:if="{{!!goodsList.length}}">
+		<template is="goodsList" data="{{goodsList}}" />
+	</block>
 </view>

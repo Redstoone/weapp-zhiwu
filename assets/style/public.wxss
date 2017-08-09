@@ -22,6 +22,13 @@ image {
   float: right;
 }
 
+.txt-center{
+  text-align: center;
+}
+.txt-right{
+  text-align: right;
+}
+
 .page-bd-spacing {
   margin-left: 20rpx;
   margin-right: 20rpx;
